@@ -53,7 +53,7 @@ export default function Home() {
                   <h1 className="text-5xl sm:text-7xl font-bold leading-tight">
                     <span className="text-gradient">Smart Tab</span>
                     <br />
-                    <span>Management for 2060</span>
+                    <span>Management Chrome</span>
                   </h1>
                 </AnimatedCard>
 
@@ -358,12 +358,12 @@ export default function Home() {
               <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xs">T</span>
               </div>
-              <span className="font-bold text-gradient">Tabori 2060</span>
+              <span className="font-bold text-gradient">Tabori</span>
             </div>
             <div className="flex gap-8 text-foreground/60 text-sm">
               <a href="#" className="hover:text-cyan-400 transition-colors">Privacy</a>
               <a href="#" className="hover:text-cyan-400 transition-colors">Terms</a>
-              <a href="#" className="hover:text-cyan-400 transition-colors">GitHub</a>
+              <a href="#" className="hover:text-cyan-400 transition-colors"></a>
               <a href="#" className="hover:text-cyan-400 transition-colors">Contact</a>
             </div>
           </div>
