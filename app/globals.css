@@ -207,6 +207,24 @@
   }
 }
 
+@keyframes hover-lift {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes hover-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
 @layer utilities {
   .animate-float-up {
     @apply animate-[float-up_0.6s_ease-out_forwards];
@@ -262,6 +280,22 @@
   
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    @apply animate-[hover-lift_0.3s_ease-out_forwards];
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-scale:hover {
+    @apply animate-[hover-scale_0.3s_ease-out_forwards];
   }
   
   @media (prefers-reduced-motion: reduce) {

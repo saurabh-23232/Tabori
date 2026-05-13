@@ -4,6 +4,7 @@ import { AnimatedCard } from '@/components/AnimatedCard';
 import { GlassmorphicPanel } from '@/components/GlassmorphicPanel';
 import { ScrollSection } from '@/components/ScrollSection';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowRight, Zap, Shield, BarChart3, Infinity, Users, CheckCircle2, MessageCircle, Sparkles } from 'lucide-react';
 
 export default function Home() {
@@ -20,10 +21,14 @@ export default function Home() {
         {/* Navigation */}
         <nav className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">T</span>
-              </div>
+            <div className="flex items-center gap-3 hover-scale">
+              <Image 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tabori-vGzNFbq7xnLz3riI81AFD48Unns2WK.png"
+                alt="Tabori Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
               <span className="text-xl font-bold text-gradient">Tabori</span>
             </div>
             <div className="flex gap-8 items-center">
@@ -65,11 +70,11 @@ export default function Home() {
 
                 <AnimatedCard animation="fade-up" delay={300}>
                   <div className="flex gap-4">
-                    <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-bold hover:shadow-[0_0_40px_rgba(0,217,255,0.8)] transition-all transform hover:scale-105">
+                    <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-bold hover-lift hover:brightness-110 transition-all">
                       Install Now
                       <ArrowRight className="inline ml-2 w-5 h-5" />
                     </button>
-                    <button className="px-8 py-4 rounded-lg glass-effect text-cyan-400 font-bold border border-cyan-500/50 hover:border-cyan-500 hover:bg-cyan-500/20 transition-all">
+                    <button className="px-8 py-4 rounded-lg glass-effect text-cyan-400 font-bold border border-cyan-500/50 hover-lift hover:border-cyan-500 hover:bg-cyan-500/20 transition-all">
                       See Demo
                     </button>
                   </div>
@@ -79,7 +84,7 @@ export default function Home() {
               {/* Right side - Floating cards */}
               <div className="relative h-96 hidden lg:block">
                 <AnimatedCard animation="slide-right" delay={200} className="absolute top-0 right-0 w-48">
-                  <GlassmorphicPanel glow={true}>
+                  <GlassmorphicPanel hover="scale">
                     <div className="flex items-center gap-3 mb-2">
                       <Zap className="w-5 h-5 text-cyan-400" />
                       <span className="font-semibold text-cyan-400">Lightning Fast</span>
@@ -89,7 +94,7 @@ export default function Home() {
                 </AnimatedCard>
 
                 <AnimatedCard animation="slide-right" delay={400} className="absolute top-32 left-0 w-48">
-                  <GlassmorphicPanel glow={true}>
+                  <GlassmorphicPanel hover="scale">
                     <div className="flex items-center gap-3 mb-2">
                       <Shield className="w-5 h-5 text-purple-400" />
                       <span className="font-semibold text-purple-400">Privacy First</span>
@@ -99,7 +104,7 @@ export default function Home() {
                 </AnimatedCard>
 
                 <AnimatedCard animation="slide-right" delay={600} className="absolute bottom-0 right-12 w-48">
-                  <GlassmorphicPanel glow={true}>
+                  <GlassmorphicPanel hover="scale">
                     <div className="flex items-center gap-3 mb-2">
                       <BarChart3 className="w-5 h-5 text-pink-400" />
                       <span className="font-semibold text-pink-400">Productivity +200%</span>
@@ -129,7 +134,7 @@ export default function Home() {
                 { title: 'Memory Drain', desc: 'Your browser crawls to a halt' },
               ].map((item, i) => (
                 <AnimatedCard key={i} animation="fade-up" delay={200 + i * 100}>
-                  <GlassmorphicPanel className="h-full">
+                  <GlassmorphicPanel hover="lift" className="h-full">
                     <h3 className="text-lg font-bold text-cyan-400 mb-2">{item.title}</h3>
                     <p className="text-foreground/70">{item.desc}</p>
                   </GlassmorphicPanel>
@@ -173,7 +178,7 @@ export default function Home() {
                 },
               ].map((feature, i) => (
                 <AnimatedCard key={i} animation="fade-up" delay={200 + i * 100}>
-                  <GlassmorphicPanel glow={true}>
+                  <GlassmorphicPanel hover="lift">
                     <div className="flex items-start gap-4">
                       <feature.icon className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
                       <div>
@@ -232,7 +237,7 @@ export default function Home() {
                 { emoji: '💼', title: 'Professionals', desc: 'Stay focused with intelligent tab grouping' },
               ].map((item, i) => (
                 <AnimatedCard key={i} animation="scale" delay={i * 150}>
-                  <GlassmorphicPanel glow={true} className="h-full flex flex-col items-center text-center">
+                  <GlassmorphicPanel hover="scale" className="h-full flex flex-col items-center text-center">
                     <div className="text-5xl mb-4">{item.emoji}</div>
                     <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                     <p className="text-foreground/70">{item.desc}</p>
@@ -276,7 +281,7 @@ export default function Home() {
         <ScrollSection className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <AnimatedCard animation="fade-up" delay={0}>
-              <GlassmorphicPanel glow={true} className="text-center">
+              <GlassmorphicPanel hover="lift" className="text-center">
                 <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h2 className="text-3xl font-bold mb-4">Your Privacy is Sacred</h2>
                 <p className="text-foreground/70 mb-6">
@@ -353,18 +358,16 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="border-t border-cyan-500/20 py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xs">T</span>
-              </div>
+          <div className="max-w-7xl mx-auto flex items-center justify-center">
+            <div className="flex items-center gap-3 hover-scale">
+              <Image 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Tabori-vGzNFbq7xnLz3riI81AFD48Unns2WK.png"
+                alt="Tabori Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
               <span className="font-bold text-gradient">Tabori</span>
-            </div>
-            <div className="flex gap-8 text-foreground/60 text-sm">
-              <a href="#" className="hover:text-cyan-400 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-cyan-400 transition-colors">Terms</a>
-              <a href="#" className="hover:text-cyan-400 transition-colors"></a>
-              <a href="#" className="hover:text-cyan-400 transition-colors">Contact</a>
             </div>
           </div>
         </footer>
