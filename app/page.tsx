@@ -35,9 +35,12 @@ export default function Home() {
               <a href="#features" className="text-foreground/60 hover:text-cyan-400 transition-colors">Features</a>
               <a href="#benefits" className="text-foreground/60 hover:text-cyan-400 transition-colors">Benefits</a>
               <a href="#faq" className="text-foreground/60 hover:text-cyan-400 transition-colors">FAQ</a>
-              <button className="px-6 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 hover:bg-cyan-500/30 hover:border-cyan-500 transition-all">
+              <a href="https://ko-fi.com/sauryx" target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded-lg bg-pink-500/20 text-pink-400 border border-pink-500/50 hover:bg-pink-500/30 hover:border-pink-500 transition-all">
+                Support Tabori
+              </a>
+              <a href="https://chromewebstore.google.com/detail/tabori-%E2%80%93-smart-tab-manage/plmcignckkjdchalfmmgiloeppfojajp" target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 hover:bg-cyan-500/30 hover:border-cyan-500 transition-all">
                 Install
-              </button>
+              </a>
             </div>
           </div>
         </nav>
@@ -70,10 +73,10 @@ export default function Home() {
 
                 <AnimatedCard animation="fade-up" delay={300}>
                   <div className="flex gap-4">
-                    <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-bold hover-lift hover:brightness-110 transition-all">
+                    <a href="https://chromewebstore.google.com/detail/tabori-%E2%80%93-smart-tab-manage/plmcignckkjdchalfmmgiloeppfojajp" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-bold hover-lift hover:brightness-110 transition-all inline-flex items-center">
                       Install Now
-                      <ArrowRight className="inline ml-2 w-5 h-5" />
-                    </button>
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </a>
                     <button className="px-8 py-4 rounded-lg glass-effect text-cyan-400 font-bold border border-cyan-500/50 hover-lift hover:border-cyan-500 hover:bg-cyan-500/20 transition-all">
                       See Demo
                     </button>
